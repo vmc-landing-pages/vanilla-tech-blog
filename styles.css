@@ -72,8 +72,9 @@ html {
 	position: relative;
 	display: flex;
 	align-items: center;
+	gap:0.5rem;
 	height: 100%;
-	padding: 0 1.5rem;
+	padding: 0 1rem;
 	cursor: pointer;
 }
 .controls__button::after {
@@ -91,11 +92,12 @@ html {
 
 .controls__search {
 	height: 100%;
-	padding: 0 1rem;
+	padding: 0 2rem;
 	font-size: 1.5rem;
 	border-right: 1px solid var(--border-color-1);
 	display: flex !important;
 	align-items: center;
+	cursor: pointer
 }
 
 /* --------------  Secondary  -------------- */
@@ -104,14 +106,22 @@ html {
 	height: 3.375rem;
 }
 
-/* ####################  NAVBAR  #################### */
+/* ####################  LINK  #################### */
 /* ########################################################## */
 
 .link {
 	text-decoration: none;
 	font-weight: 500;
 }
-.link:hover {
+.link:hover *:not(i) {
 	text-decoration: underline;
 	color: var(--highlight-color);
+}
+
+.link i {
+	transition: transform 0.3s ease-in-out;
+}
+
+.link:hover i {
+	transform: rotate(180deg);
 }
