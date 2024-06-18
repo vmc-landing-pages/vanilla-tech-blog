@@ -14,22 +14,120 @@
 	--slate-700: #2e475d;
 
 	--primary: #ff5c35;
+	--primary-hover: #e04826;
+	--primary-active: #b3361d;
+	--primary-text: #fff;
 	--border-color-1: #dbe4ed;
 
 	--highlight-color: #0068b1;
 
 	--font-color-1: #213343;
 	--font-color-2: #2e475d;
+
+
+	/* --------------  FONT-SIZE  -------------- */
+	--fs-normal: 1rem;
+	--fs-small: 0.875rem;
+	
+	/* --------------  BORDER RADIUS  -------------- */
+	--br-normal: 0.5rem;
+	
+	/* --------------  BORDER RADIUS  -------------- */
+	--line-height-m: 1.75rem;
+	--line-height-s: 1.531;
+	--line-height-xs: 1.375;
 }
 
 html {
 	height: 100vh;
+}
+
+html, button {
 	font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+	font-size: var(--fs-small);
+	line-height: var(--line-height-s);
+}
+
+a {
+	color: inherit;
 }
 
 .container-1 {
 	max-width: 67.5rem;
 	margin: auto;
+}
+
+/* ####################  BASIC COMPONENTS  #################### */
+/* ########################################################## */
+/* ####################  LINK  #################### */
+/* ########################################################## */
+.link, .link--container {
+	font-weight: 500;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.link--container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.link--container:hover *:not(i) {
+	text-decoration: underline;
+}
+
+.link--container i {
+	transition: transform 0.3s ease-in-out;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.link--container:hover i {
+	text-decoration: none;
+	transform: rotate(180deg);
+}
+
+.link--padded-1 {
+	padding: 0 1rem;
+}
+
+/* ####################  BUTTON  #################### */
+/* ########################################################## */
+
+.button {
+	line-height: 1.57;
+	font-size: var(--fs-small);
+	font-weight: 500;
+	padding: 0.25rem 1rem;
+	border-radius: var(--br-normal);
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	transition:
+		background-color 0.15s linear,
+		color 0.15s linear;
+}
+
+.button--primary {
+	background-color: var(--primary);
+	color: var(--primary-text);
+}
+
+.button--primary:hover {
+	background-color: var(--primary-hover);
+}
+
+.button--primary:active {
+	background-color: var(--primary-active);
 }
 
 /* ####################  UTILS  #################### */
@@ -41,6 +139,23 @@ html {
 	justify-content: space-between;
 }
 
+.align-items-center {
+	align-items: center;
+}
+
+.underlined-container::after {
+	content: '';
+	position: absolute;
+	border-top: 2px solid transparent;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.underlined-container:hover::after {
+	border-color: var(--slate-700);
+}
+
 /* ####################  NAVBAR  #################### */
 /* ########################################################## */
 /* --------------  Main  -------------- */
@@ -49,9 +164,15 @@ html {
 	border-bottom: 1px solid var(--border-color-1);
 }
 
+.navbar-container .link:hover, .navbar-container .link--container:hover {
+	color: var(--highlight-color);
+}
+
 .main-navbar {
 	height: 5rem;
 	color: var(--font-color-2);
+	font-size: var(--fs-normal);
+	line-height: var(--line-height-m);
 }
 
 .main-navbar__logo {
@@ -68,28 +189,6 @@ html {
 	display: flex;
 }
 
-.controls__button {
-	position: relative;
-	display: flex;
-	align-items: center;
-	gap:0.5rem;
-	height: 100%;
-	padding: 0 1rem;
-	cursor: pointer;
-}
-.controls__button::after {
-	content: '';
-	position: absolute;
-	border-top: 2px solid transparent;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-}
-
-.controls__button:hover::after {
-	border-color: var(--slate-700);
-}
-
 .controls__search {
 	height: 100%;
 	padding: 0 2rem;
@@ -104,24 +203,4 @@ html {
 
 .second-navbar {
 	height: 3.375rem;
-}
-
-/* ####################  LINK  #################### */
-/* ########################################################## */
-
-.link {
-	text-decoration: none;
-	font-weight: 500;
-}
-.link:hover *:not(i) {
-	text-decoration: underline;
-	color: var(--highlight-color);
-}
-
-.link i {
-	transition: transform 0.3s ease-in-out;
-}
-
-.link:hover i {
-	transform: rotate(180deg);
 }
