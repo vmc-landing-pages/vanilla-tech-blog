@@ -13,11 +13,21 @@
 	/* --------------  COLORS  -------------- */
 	--slate-700: #2e475d;
 
+	--gray-1: #f6f9fc;
+	--gray-2: #eaf0f6;
+	--gray-3: #dbe4ed;
+
+	--bg-color-1: #fff;
+	--bg-color-2: var(--gray-1);
+
+	--contrast-primary: #0000c5;
+	--contrast-opposite: #fff;
+
 	--primary: #ff5c35;
 	--primary-hover: #e04826;
 	--primary-active: #b3361d;
 	--primary-text: #fff;
-	--border-color-1: #dbe4ed;
+	--border-color-1: var(--gray-3);
 
 	--highlight-color: #0068b1;
 
@@ -62,6 +72,9 @@ a {
 
 /* ####################  BASIC COMPONENTS  #################### */
 /* ########################################################## */
+/* ########################################################## */
+/* ########################################################## */
+
 /* ####################  LINK  #################### */
 /* ########################################################## */
 .link, .link--container {
@@ -88,11 +101,13 @@ a {
 .link--container i {
 	transition: transform 0.3s ease-in-out;
 	text-decoration: none;
-	display: inline-block;
 }
 
-.link--container:hover i {
-	text-decoration: none;
+.link--container i.fa-earth-americas {
+	font-size: 1rem;
+}
+
+.link--container:hover .rotated {
 	transform: rotate(180deg);
 }
 
@@ -103,7 +118,10 @@ a {
 /* ####################  BUTTON  #################### */
 /* ########################################################## */
 
-.button {
+.btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
 	line-height: 1.57;
 	font-size: var(--fs-small);
 	font-weight: 500;
@@ -117,20 +135,94 @@ a {
 		color 0.15s linear;
 }
 
-.button--primary {
+.btn--unpadded {
+	padding: 0;
+}
+
+.btn--primary {
 	background-color: var(--primary);
 	color: var(--primary-text);
 }
 
-.button--primary:hover {
+.btn--primary:hover {
 	background-color: var(--primary-hover);
 }
 
-.button--primary:active {
+.btn--primary:active {
 	background-color: var(--primary-active);
 }
 
+/* ####################  SWITCH  #################### */
+/* ########################################################## */
+
+.switch {
+	position: relative;
+	height: 1rem;
+	width: 2rem;
+	border: 1px solid var(--font-color-1);
+	border-radius: var(--br-normal);
+	background-color: white;
+	transition:
+		border-color 0.5s ease-in-out,
+		background-color 0.5s ease-in-out,
+		border-width 0.5s ease-in-out;
+}
+
+.switch.active {
+	border: 2px solid var(--contrast-primary);
+	background-color: var(--contrast-primary);
+}
+
+.switch__contrast-toggle {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(0, -50%);
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	border-radius: 100px;
+	padding: 1px;
+	transition: 
+		width 0.5s linear;
+}
+
+.switch.active .switch__contrast-toggle {
+	width: 0.75rem;
+}
+
+.switch__contrast-toggle:hover:not(.switch.active .switch__contrast-toggle) {
+	background-color: var(--gray-2);
+}
+
+.switch__normal-toggle {
+	height: 97%;
+	aspect-ratio: 1 / 1;
+	background: linear-gradient(
+		90deg,
+		white,
+		white 50%,
+		var(--font-color-1) 50%,
+		var(--font-color-1)
+	);
+	border: 1px solid var(--font-color-1);
+	border-radius: 50%;
+	transition: 
+		transform 0.5s ease-in-out,
+		opacity 0.5s ease-in-out;
+}
+
+.switch.active .switch__normal-toggle {
+	transform: rotate(180deg);
+	opacity: 0;
+}
+
+
 /* ####################  UTILS  #################### */
+/* ########################################################## */
+/* ########################################################## */
 /* ########################################################## */
 /* --------------  LAYOUT  -------------- */
 
@@ -139,9 +231,15 @@ a {
 	justify-content: space-between;
 }
 
-.align-items-center {
+.align-center {
 	align-items: center;
 }
+
+.gap-1 {
+	gap: 1rem;
+}
+
+/* --------------  DECORATION  -------------- */
 
 .underlined-container::after {
 	content: '';
@@ -156,9 +254,18 @@ a {
 	border-color: var(--slate-700);
 }
 
+/* ####################  COMPLEX COMPONENTS  #################### */
+/* ########################################################## */
+/* ########################################################## */
+
+/* ########################################################## */
 /* ####################  NAVBAR  #################### */
 /* ########################################################## */
 /* --------------  Main  -------------- */
+
+.main-header {
+	line-height: 1;
+}
 
 .navbar-container {
 	border-bottom: 1px solid var(--border-color-1);
@@ -189,7 +296,8 @@ a {
 	display: flex;
 }
 
-.controls__search {
+/* TODO: change this to icon */
+.controls__search { 
 	height: 100%;
 	padding: 0 2rem;
 	font-size: 1.5rem;
