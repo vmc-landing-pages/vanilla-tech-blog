@@ -20,12 +20,14 @@
 	--bg-color-1: #fff;
 	--bg-color-2: var(--gray-1);
 
-	--contrast-primary: #0000c5;
-	--contrast-opposite: #fff;
-
 	--primary: #ff5c35;
 	--primary-hover: #e04826;
 	--primary-active: #b3361d;
+
+	--contrast-primary: #0000c5;
+	--contrast-hover: #caebff;
+	--contrast-color: #fff;
+
 	--primary-text: #fff;
 	--border-color-1: var(--gray-3);
 
@@ -70,6 +72,44 @@ a {
 	margin: auto;
 }
 
+/* ####################  UTILS  #################### */
+/* ########################################################## */
+/* ########################################################## */
+/* ########################################################## */
+/* --------------  LAYOUT  -------------- */
+
+.space-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.gap-1 {
+	gap: 1rem;
+}
+
+.h-100 {
+	height: 100;
+}
+
+/* --------------  DECORATION  -------------- */
+
+.underlined-container::after {
+	content: '';
+	position: absolute;
+	border-top: 2px solid transparent;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.underlined-container:hover::after {
+	border-color: var(--slate-700);
+}
+
 /* ####################  BASIC COMPONENTS  #################### */
 /* ########################################################## */
 /* ########################################################## */
@@ -77,10 +117,21 @@ a {
 
 /* ####################  LINK  #################### */
 /* ########################################################## */
-.link, .link--container {
-	font-weight: 500;
-	text-decoration: none;
+.link,
+.link--container {
 	cursor: pointer;
+}
+
+.link,
+.link--container > span {
+	font-weight: 500;
+}
+
+.link,
+.link--container > span,
+.link--container > i {
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
 }
 
 .link:hover {
@@ -94,25 +145,37 @@ a {
 	gap: 0.5rem;
 }
 
-.link--container:hover *:not(i) {
+.link--container:hover > span {
 	text-decoration: underline;
 }
 
-.link--container i {
+.link--container > i {
 	transition: transform 0.3s ease-in-out;
 	text-decoration: none;
 }
 
-.link--container i.fa-earth-americas {
+.link--container > i.fa-earth-americas {
 	font-size: 1rem;
 }
 
-.link--container:hover .rotated {
+.link--container:hover > .rotated {
 	transform: rotate(180deg);
 }
 
 .link--padded-1 {
 	padding: 0 1rem;
+}
+
+.link.link--highlighted:hover, 
+.link--container.link--highlighted:hover > span,
+.link--container.link--highlighted:hover > i {
+	color: var(--highlight-color);
+}
+
+.contrast .link.link--highlighted:hover, 
+.contrast .link--container.link--highlighted:hover > span,
+.contrast .link--container.link--highlighted:hover > i {
+	color: var(--contrast-primary);
 }
 
 /* ####################  BUTTON  #################### */
@@ -131,8 +194,8 @@ a {
 	background-color: transparent;
 	cursor: pointer;
 	transition:
-		background-color 0.15s linear,
-		color 0.15s linear;
+		background-color 0.3s linear,
+		color 0.3s linear;
 }
 
 .btn--unpadded {
@@ -144,8 +207,18 @@ a {
 	color: var(--primary-text);
 }
 
+.contrast .btn--primary {
+	background-color: var(--contrast-primary);
+	color: var(--contrast-color);
+}
+
 .btn--primary:hover {
 	background-color: var(--primary-hover);
+}
+
+.contrast .btn--primary:hover {
+	background-color: var(--contrast-hover);
+	color: var(--contrast-primary);
 }
 
 .btn--primary:active {
@@ -193,7 +266,8 @@ a {
 	width: 0.75rem;
 }
 
-.switch__contrast-toggle:hover:not(.switch.active .switch__contrast-toggle) {
+.btn:hover .switch__contrast-toggle:not(.switch.active .switch__contrast-toggle),
+.switch:hover .switch__contrast-toggle:not(.switch.active .switch__contrast-toggle) {
 	background-color: var(--gray-2);
 }
 
@@ -219,39 +293,36 @@ a {
 	opacity: 0;
 }
 
-
-/* ####################  UTILS  #################### */
+/* ####################  SELECTOR  #################### */
 /* ########################################################## */
-/* ########################################################## */
-/* ########################################################## */
-/* --------------  LAYOUT  -------------- */
-
-.space-between {
+.selector {
+	position: relative;
 	display: flex;
-	justify-content: space-between;
+	align-self: stretch;
 }
 
-.align-center {
-	align-items: center;
+.selector:hover .selector__options{
+	height: auto;
+	opacity: 1;
+	padding: 1rem;
 }
 
-.gap-1 {
-	gap: 1rem;
-}
-
-/* --------------  DECORATION  -------------- */
-
-.underlined-container::after {
-	content: '';
+.selector__options {
 	position: absolute;
-	border-top: 2px solid transparent;
 	bottom: 0;
-	left: 0;
-	width: 100%;
-}
-
-.underlined-container:hover::after {
-	border-color: var(--slate-700);
+	transform: translate(25%, 100%);
+	display: flex;
+	height: 0;
+	overflow: hidden;
+	flex-direction: column;
+	gap: 1.5rem;
+	padding: 0;
+	border: 1px solid var(--border-color-1);
+	background-color: var(--bg-color-1);
+	list-style-type: none;
+	border-radius: var(--br-normal);
+	opacity: 0;
+	transition: opacity 0.5s;
 }
 
 /* ####################  COMPLEX COMPONENTS  #################### */
@@ -269,10 +340,6 @@ a {
 
 .navbar-container {
 	border-bottom: 1px solid var(--border-color-1);
-}
-
-.navbar-container .link:hover, .navbar-container .link--container:hover {
-	color: var(--highlight-color);
 }
 
 .main-navbar {

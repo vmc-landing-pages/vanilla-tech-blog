@@ -12,17 +12,28 @@
 			rel="stylesheet"
 		/>
 		<script src="https://kit.fontawesome.com/7ff03519dd.js" crossorigin="anonymous"></script>
-		<script src="scripts.js"></script>
+		<script src="js/index.js" type="module"></script>
 	</head>
 	<body>
 		<header class="main-header">
 			<nav class="navbar-container">
 				<div class="second-navbar container-1 space-between">
 					<div class="controls__section align-center gap-1">
-						<span class="link--container">
+						<span class="link--container link--highlighted selector">
 							<i class="fa-solid fa-earth-americas"></i>
 							<span>English</span>
 							<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
+							<ul class="selector__options">
+								<li>
+									<span class="link">English</span>
+								</li>
+								<li>
+									<span class="link">Spanish</span>
+								</li>
+								<li>
+									<span class="link">French</span>
+								</li>
+							</ul>
 						</span>
 						<button class="btn btn--unpadded" id="contrast-switch">
 							<div class="switch">
@@ -34,7 +45,9 @@
 						</button>
 					</div>
 					<div class="controls__section align-center gap-1">
-						<a href="" class="link">Log in</a>
+						<a href="" class="link link--highlighted">
+							Log in
+						</a>
 						<button class="btn btn--primary">
 							Start free or get a demo
 						</button>
@@ -46,30 +59,30 @@
 					<img class="main-navbar__logo" src="img/logo.svg" alt="logo" />
 					<div class="controls space-between">
 						<div class="controls__section">
-							<span class="link--container link--padded-1 underlined-container">
+							<span class="link--container link--highlighted link--padded-1 underlined-container">
 								<span>Blogs</span>
 								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
 							</span>
-							<span class="link--container link--padded-1 underlined-container">
+							<span class="link--container link--highlighted link--padded-1 underlined-container">
 								<span>Newsletters</span>
 								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
 							</span>
-							<span class="link--container link--padded-1 underlined-container">
+							<span class="link--container link--highlighted link--padded-1 underlined-container">
 								<span>Videos</span>
 								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
 							</span>
-							<span class="link--container link--padded-1 underlined-container">
+							<span class="link--container link--highlighted link--padded-1 underlined-container">
 								<span>Podcasts</span>
 								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
 							</span>
-							<span class="link--container link--padded-1 underlined-container">
+							<span class="link--container link--highlighted link--padded-1 underlined-container">
 								<span>Resources</span>
 								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
 							</span>
 						</div>
 						<div class="controls__section">
 							<i class="fa-solid fa-magnifying-glass controls__search"></i>
-							<span class="link--container link--padded-1 underlined-container">
+							<span class="link--container link--highlighted link--padded-1 underlined-container">
 								<span>HubSpot Products</span>
 								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
 							</span>
