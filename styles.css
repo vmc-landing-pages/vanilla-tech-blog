@@ -2,8 +2,8 @@
 /* ########################################################## */
 
 *,
-*::after,
-*::before {
+::after,
+::before {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -40,14 +40,24 @@
 	/* --------------  FONT-SIZE  -------------- */
 	--fs-normal: 1rem;
 	--fs-small: 0.875rem;
+
+	/* --------------  FONT-WEIGHT  -------------- */
+	--font-weight-weak: 300;
+	--font-weight-bold-1: 500;
+
 	
 	/* --------------  BORDER RADIUS  -------------- */
 	--br-normal: 0.5rem;
+	--br-sm: 3px;
 	
-	/* --------------  BORDER RADIUS  -------------- */
+	/* --------------  LINE-HEIGHT  -------------- */
 	--line-height-m: 1.75rem;
+	--line-height-default: 1;
 	--line-height-s: 1.531;
 	--line-height-xs: 1.375;
+	
+	/* --------------  Z-index  -------------- */
+	--z-menu: 10;
 }
 
 html {
@@ -60,14 +70,30 @@ html, button {
 
 body {
 	font-size: var(--fs-small);
-	line-height: var(--line-height-s);
+	line-height: var(--line-height-default);
+	color: var(--font-color-1);
 }
 
 a {
 	color: inherit;
 }
 
-.container-1 {
+.heading-3,
+.heading-4 {
+	font-weight: 600;
+}
+
+.heading-3 {
+	font-size: 1.5rem;
+	line-height: 1.42;
+}
+
+.heading-4 {
+	font-size: 1.125rem;
+	line-height: 1.25;
+}
+
+.container {
 	max-width: 67.5rem;
 	margin: auto;
 }
@@ -87,12 +113,20 @@ a {
 	align-items: center;
 }
 
+.align-self--stretch {
+	align-self: stretch;
+}
+
 .gap-1 {
 	gap: 1rem;
 }
 
 .h-100 {
 	height: 100;
+}
+
+.position-static {
+	position: static !important;
 }
 
 /* --------------  DECORATION  -------------- */
@@ -117,19 +151,16 @@ a {
 
 /* ####################  LINK  #################### */
 /* ########################################################## */
+.link-bare {
+	color: var(--highlight-color);
+	font-weight: 500;
+	text-decoration: none;
+}
+
 .link,
 .link--container {
 	cursor: pointer;
-}
-
-.link,
-.link--container > span {
 	font-weight: 500;
-}
-
-.link,
-.link--container > span,
-.link--container > i {
 	text-decoration: none;
 	transition: color 0.3s ease-in-out;
 }
@@ -154,11 +185,11 @@ a {
 	text-decoration: none;
 }
 
-.link--container > i.fa-earth-americas {
+.link--container i.fa-earth-americas {
 	font-size: 1rem;
 }
 
-.link--container:hover > .rotated {
+.link--container:hover .rotated {
 	transform: rotate(180deg);
 }
 
@@ -167,14 +198,12 @@ a {
 }
 
 .link.link--highlighted:hover, 
-.link--container.link--highlighted:hover > span,
-.link--container.link--highlighted:hover > i {
+.link--container.link--highlighted:hover {
 	color: var(--highlight-color);
 }
 
 .contrast .link.link--highlighted:hover, 
-.contrast .link--container.link--highlighted:hover > span,
-.contrast .link--container.link--highlighted:hover > i {
+.contrast .link--container.link--highlighted:hover {
 	color: var(--contrast-primary);
 }
 
@@ -188,6 +217,7 @@ a {
 	line-height: 1.57;
 	font-size: var(--fs-small);
 	font-weight: 500;
+	text-decoration: none;
 	padding: 0.25rem 1rem;
 	border-radius: var(--br-normal);
 	border: none;
@@ -309,6 +339,7 @@ a {
 
 .selector__options {
 	position: absolute;
+	z-index: var(--z-menu);
 	bottom: 0;
 	transform: translate(25%, 100%);
 	display: flex;
@@ -325,6 +356,34 @@ a {
 	transition: opacity 0.5s;
 }
 
+/* ####################  HORIZONTAL CARD  #################### */
+/* ########################################################## */
+
+.horizontal-card {
+	display: flex;
+	gap: 1rem;
+	padding: 1rem;
+	background-color: white;
+	border-radius: var(--br-normal);
+}
+
+.horizontal-card__img {
+	height: 2rem;
+	width: 2rem;
+	object-fit: cover;
+	border-radius: var(--br-sm);
+}
+
+.horizontal-card__title {
+	margin-bottom: 0.25rem;
+}
+
+.horizontal-card__description {
+	line-height: 1.57;
+	font-weight: var(--font-weight-weak);
+}
+
+
 /* ####################  COMPLEX COMPONENTS  #################### */
 /* ########################################################## */
 /* ########################################################## */
@@ -334,16 +393,15 @@ a {
 /* ########################################################## */
 /* --------------  Main  -------------- */
 
-.main-header {
-	line-height: 1;
-}
-
 .navbar-container {
 	border-bottom: 1px solid var(--border-color-1);
 }
 
 .main-navbar {
 	height: 5rem;
+}
+
+.main-navbar .link--container {
 	color: var(--font-color-2);
 	font-size: var(--fs-normal);
 	line-height: var(--line-height-m);
@@ -378,4 +436,66 @@ a {
 
 .second-navbar {
 	height: 3.375rem;
+}
+
+
+/* ####################  TAB HOVER  #################### */
+/* ########################################################## */
+
+.tab-hover {
+	display: flex;
+}
+
+.tab-hover__container {
+	background-color: var(--gray-1);
+	position: fixed;
+	width: 100%;
+	padding: 1.5rem 0;
+	margin: 0 auto;
+	top: 8.5rem;
+	left: 0;
+}
+
+.tab-hover__description {
+	font-size: var(--fs-normal);
+	line-height: var(--line-height-m);
+	font-weight: var(--font-weight-weak);
+	margin-bottom: 1.5rem;
+}
+
+.tab-hover__content {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	column-gap: 2.5rem;
+}
+
+.tab-hover__cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.tab-hover__card {
+	transition: background-color 0.3s ease-in-out;
+}
+
+.tab-hover__card:hover {
+	background-color: var(--gray-2);
+}
+
+.tab-hover__menu > p:first-of-type {
+	text-transform: uppercase;
+	font-weight: var(--font-weight-bold-1);
+	margin-bottom: 1rem;
+}
+
+.tab-hover__menu ul {
+	list-style: none;
+	display: grid;
+	row-gap: 0.5rem;
+}
+
+.tab-hover__menu .link-bare {
+	line-height: 1.78;
 }

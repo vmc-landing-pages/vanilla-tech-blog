@@ -17,12 +17,14 @@
 	<body>
 		<header class="main-header">
 			<nav class="navbar-container">
-				<div class="second-navbar container-1 space-between">
+				<div class="second-navbar container space-between">
 					<div class="controls__section align-center gap-1">
-						<span class="link--container link--highlighted selector">
-							<i class="fa-solid fa-earth-americas"></i>
-							<span>English</span>
-							<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
+						<div class="selector">
+							<span class="link--container link--highlighted">
+								<i class="fa-solid fa-earth-americas"></i>
+								<span>English</span>
+								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
+							</span>
 							<ul class="selector__options">
 								<li>
 									<span class="link">English</span>
@@ -34,7 +36,7 @@
 									<span class="link">French</span>
 								</li>
 							</ul>
-						</span>
+						</div>
 						<button class="btn btn--unpadded" id="contrast-switch">
 							<div class="switch">
 								<div class="switch__contrast-toggle">
@@ -45,25 +47,111 @@
 						</button>
 					</div>
 					<div class="controls__section align-center gap-1">
-						<a href="" class="link link--highlighted">
-							Log in
-						</a>
-						<button class="btn btn--primary">
-							Start free or get a demo
-						</button>
+						<a href="" class="link link--highlighted"> Log in </a>
+						<button class="btn btn--primary">Start free or get a demo</button>
 					</div>
 				</div>
 			</nav>
 			<nav class="navbar-container">
-				<div class="main-navbar container-1 space-between">
-					Init main navbar functionality
+				<div class="main-navbar container space-between">
 					<img class="main-navbar__logo" src="img/logo.svg" alt="logo" />
 					<div class="controls space-between">
 						<div class="controls__section">
-							<span class="link--container link--highlighted link--padded-1 underlined-container">
-								<span>Blogs</span>
-								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
-							</span>
+							<div class="tab-hover align-self--stretch">
+								<span class="link--container link--highlighted link--padded-1 underlined-container">
+									<span>Blogs</span>
+									<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
+								</span>
+								<div class="tab-hover__container">
+									<div class="container">
+										<h3 class="tab-hover__title heading-3">Blogs</h3>
+										<p class="tab-hover__description">
+											Trusted by business worldwide, the HubSpot Blogs are your number-one source
+											for education and inspiration.
+										</p>
+										<div class="tab-hover__content">
+											<div>
+												<div class="tab-hover__cards">
+													<a href="#" class="horizontal-card tab-hover__card link--div">
+														<img
+															src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/Blog%202021/Images/Nav/Optimized/BlogMarketing_64x64.png"
+															alt="loudspeaker"
+															class="horizontal-card__img"
+														>
+														<div>
+															<h4 class="heading-4 horizontal-card__title">Marketing</h4>
+															<p class="horizontal-card__description">Resources and ideas to put modern marketers ahead of the curve</p>
+														</div>
+													</a>
+													<a href="#" class="horizontal-card tab-hover__card link--div">
+														<img
+															src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/Blog%202021/Images/Nav/Optimized/BlogSales_64x64.png"
+															alt="phone"
+															class="horizontal-card__img"
+														>
+														<div>
+															<h4 class="heading-4 horizontal-card__title">Sales</h4>
+															<p class="horizontal-card__description">
+																Strategies to help you elevate your sales efforts
+															</p>
+														</div>
+													</a>
+													<a href="#" class="horizontal-card tab-hover__card link--div">
+														<img
+															src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/Blog%202021/Images/Nav/Optimized/BlogService_64x64.png"
+															alt="shaking hands"
+															class="horizontal-card__img"
+														>
+														<div>
+															<h4 class="heading-4 horizontal-card__title">Service</h4>
+															<p class="horizontal-card__description">
+																Everything you need to deliver top-notch customer service
+															</p>
+														</div>
+													</a>
+													<a href="#" class="horizontal-card tab-hover__card link--div">
+														<img
+															src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/Blog%202021/Images/Nav/Optimized/BlogWebsite_64x64.png"
+															alt="computer on a hand"
+															class="horizontal-card__img"
+														>
+														<div>
+															<h4 class="heading-4 horizontal-card__title">Website</h4>
+															<p class="horizontal-card__description">
+																Tutorials and how-tos to help you build better websites
+															</p>
+														</div>
+													</a>
+													<a href="#" class="horizontal-card tab-hover__card link--div">
+														<img
+															src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/blog-categories/ai-micro-64x64.jpg"
+															alt="magic ball"
+															class="horizontal-card__img"
+														>
+														<div>
+															<h4 class="heading-4 horizontal-card__title">Next in AI</h4>
+															<p class="horizontal-card__description">
+																Your essential daily read on all things AI and business.
+															</p>
+														</div>
+													</a>
+												</div>
+												<a href="#" class="btn btn--primary">See all blogs</a>
+											</div>
+											<div class="tab-hover__menu">
+												<p>Explore by Topic</p>
+												<ul>
+													<li><a class="link-bare" href="">Instagram Marketing</a></li>
+													<li><a class="link-bare" href="">Customer Retention</a></li>
+													<li><a class="link-bare" href="">Email Marketing</a></li>
+													<li><a class="link-bare" href="">SEO</a></li>
+													<li><a class="link-bare" href="">Sales Prospecting</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 							<span class="link--container link--highlighted link--padded-1 underlined-container">
 								<span>Newsletters</span>
 								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
