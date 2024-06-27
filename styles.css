@@ -20,10 +20,14 @@
 	--bg-color-1: #fff;
 	--bg-color-2: var(--gray-1);
 
+	--outlined-hover-bg: #ffebe6;
+	--outlined-active-bg: #ffcec2;
 	--primary: #ff5c35;
 	--primary-hover: #e04826;
 	--primary-active: #b3361d;
 
+	--contrast-outlined-bg: #edf8ff;
+	--contrast-outlined-hover-bg: #caebff;
 	--contrast-primary: #0000c5;
 	--contrast-hover: #caebff;
 	--contrast-color: #fff;
@@ -35,6 +39,8 @@
 
 	--font-color-1: #213343;
 	--font-color-2: #2e475d;
+	
+	--icon-color-1: #516f90;
 
 
 	/* --------------  FONT-SIZE  -------------- */
@@ -104,9 +110,25 @@ a {
 /* ########################################################## */
 /* --------------  LAYOUT  -------------- */
 
+.grid {
+	display: grid;
+}
+
+.grid--cols-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--cols-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
 .space-between {
 	display: flex;
 	justify-content: space-between;
+}
+
+.justify-center {
+	justify-content: center;
 }
 
 .align-center {
@@ -122,7 +144,11 @@ a {
 }
 
 .h-100 {
-	height: 100;
+	height: 100%;
+}
+
+.w-80 {
+	width: 80% !important;
 }
 
 .position-static {
@@ -144,6 +170,11 @@ a {
 	border-color: var(--slate-700);
 }
 
+.end-arrow::after {
+	content: ' \2192';
+}
+
+
 /* ####################  BASIC COMPONENTS  #################### */
 /* ########################################################## */
 /* ########################################################## */
@@ -154,6 +185,10 @@ a {
 .link-bare {
 	color: var(--highlight-color);
 	font-weight: 500;
+	text-decoration: none;
+}
+
+.link--div {
 	text-decoration: none;
 }
 
@@ -218,9 +253,9 @@ a {
 	font-size: var(--fs-small);
 	font-weight: 500;
 	text-decoration: none;
-	padding: 0.25rem 1rem;
+	padding: 0.5rem 1rem;
 	border-radius: var(--br-normal);
-	border: none;
+	border: 2px solid transparent;
 	background-color: transparent;
 	cursor: pointer;
 	transition:
@@ -253,6 +288,32 @@ a {
 
 .btn--primary:active {
 	background-color: var(--primary-active);
+}
+
+.btn--outlined {
+	background-color: var(--bg-color-1);
+	color: var(--primary);
+	border-color: currentColor;
+}
+
+.contrast .btn--outlined {
+	background-color: var(--contrast-outlined-bg);
+	color: var(--contrast-primary);
+}
+
+.btn--outlined:hover {
+	background-color: var(--outlined-hover-bg);
+	color: var(--primary-hover);
+}
+
+.contrast .btn--outlined:hover {
+	background-color: var(--contrast-outlined-hover-bg);
+	color: var(--contrast-primary);
+}
+
+.btn--outlined:active {
+	background-color: var(--outlined-active-bg);
+	color: var(--primary-active);
 }
 
 /* ####################  SWITCH  #################### */
@@ -359,7 +420,7 @@ a {
 /* ####################  HORIZONTAL CARD  #################### */
 /* ########################################################## */
 
-.horizontal-card {
+.card {
 	display: flex;
 	gap: 1rem;
 	padding: 1rem;
@@ -367,22 +428,26 @@ a {
 	border-radius: var(--br-normal);
 }
 
-.horizontal-card__img {
+.card--horizontal i,
+.card--horizontal__img {
 	height: 2rem;
 	width: 2rem;
 	object-fit: cover;
 	border-radius: var(--br-sm);
 }
 
-.horizontal-card__title {
+.card--horizontal__title {
 	margin-bottom: 0.25rem;
 }
 
-.horizontal-card__description {
+.card--horizontal__title i {
+	color: var(--icon-color-1);
+}
+
+.card--horizontal__description {
 	line-height: 1.57;
 	font-weight: var(--font-weight-weak);
 }
-
 
 /* ####################  COMPLEX COMPONENTS  #################### */
 /* ########################################################## */
@@ -421,6 +486,11 @@ a {
 	display: flex;
 }
 
+.controls__section > .btn {
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+}
+
 /* TODO: change this to icon */
 .controls__search { 
 	height: 100%;
@@ -447,13 +517,20 @@ a {
 }
 
 .tab-hover__container {
-	background-color: var(--gray-1);
 	position: fixed;
 	width: 100%;
-	padding: 1.5rem 0;
-	margin: 0 auto;
 	top: 8.5rem;
 	left: 0;
+	display: none;
+}
+
+.tab-hover__container .main-section {
+	background-color: var(--gray-1);
+	padding: 1.5rem 0;
+}
+
+.tab-hover__container .controls-section {
+	padding: 1rem 0;
 }
 
 .tab-hover__description {
@@ -465,14 +542,15 @@ a {
 
 .tab-hover__content {
 	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.tab-hover__content--menu {
 	grid-template-columns: 1fr auto;
 	column-gap: 2.5rem;
 }
 
 .tab-hover__cards {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 1rem;
 	margin-bottom: 1.5rem;
 }
 
@@ -480,8 +558,23 @@ a {
 	transition: background-color 0.3s ease-in-out;
 }
 
+.tab-hover__card > i {
+	font-size: 1.5rem;
+	color: var(--primary);
+}
+
+.tab-hover__card .link-bare::after {
+	content: ' \2192';
+}
+
 .tab-hover__card:hover {
 	background-color: var(--gray-2);
+}
+
+.tab-hover__card:hover .link-bare {
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-decoration-color: #5fa3d4;
 }
 
 .tab-hover__menu > p:first-of-type {
