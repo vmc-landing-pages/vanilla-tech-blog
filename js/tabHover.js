@@ -1,3 +1,7 @@
+import { throttleEndWithCancel } from './utils/throttle.js';
+
+const THROTTLE_DELAY = 500; // in miliseconds.
+
 export function setTabHoverSettings() {
 	const tabContainerIds = [
 		'blogs-tab',
@@ -11,13 +15,26 @@ export function setTabHoverSettings() {
   tabContainerIds.forEach(containerId => {
     const container = document.getElementById(containerId);
 
-    container.addEventListener('mouseenter', function () {
-      setDisplayTab(this, true);
-    });
-    container.addEventListener('mouseleave', function () {
-      setDisplayTab(this, false);
-    });
+		const throttledShow = throttleEndWithCancel(showTab, THROTTLE_DELAY);
+		const throttledHide = throttleEndWithCancel(hideTab, THROTTLE_DELAY);
+
+		container.addEventListener('mouseenter', function() {
+			throttledHide.cancel();
+			throttledShow.throttled.apply(this); //Sending the html element as context.
+		});
+    container.addEventListener('mouseleave', function() {
+			throttledShow.cancel();
+			throttledHide.throttled.apply(this); //Sending the html element as context.
+		});
   });
+}
+
+function showTab() {
+	setDisplayTab(this, true);
+}
+
+function hideTab() {
+	setDisplayTab(this, false);
 }
 
 function setDisplayTab(element, show) {

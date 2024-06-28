@@ -516,6 +516,28 @@ a {
 	display: flex;
 }
 
+/* -------- make link in hover-state when hovering tab-hover component ---*/
+.tab-hover:hover .link--container > span {
+	text-decoration: underline;
+}
+.tab-hover:hover .link--container .rotated {
+	transform: rotate(180deg);
+}
+.tab-hover:hover .link.link--highlighted, 
+.tab-hover:hover .link--container.link--highlighted {
+	color: var(--highlight-color);
+}
+.tab-hover:hover .contrast .link.link--highlighted, 
+.tab-hover:hover .contrast .link--container.link--highlighted {
+	color: var(--contrast-primary);
+}
+.tab-hover:hover .underlined-container::after {
+	border-color: var(--slate-700);
+}
+/* ---------------------------------------------------------------------- */
+
+
+
 .tab-hover__container {
 	position: fixed;
 	width: 100%;
