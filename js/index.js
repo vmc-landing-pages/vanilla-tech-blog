@@ -1,4 +1,5 @@
 import appState from './state.js';
+import { setTabHoverSettings } from './tabHover.js'
 
 window.addEventListener('load', () => {
 	initialize();
@@ -6,6 +7,7 @@ window.addEventListener('load', () => {
 
 function initialize() {
 	setContrastSettings();
+	setHeaderSettings();
 }
 
 function setContrastSettings() {
@@ -34,3 +36,8 @@ function changeAppContrast(_, contrast) {
 		? document.body.classList.add(CONTRAST_CLASS)
 		: document.body.classList.remove(CONTRAST_CLASS);
 }
+
+function setHeaderSettings() {
+	setTabHoverSettings();
+}
+

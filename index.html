@@ -17,12 +17,14 @@
 	<body>
 		<header class="main-header">
 			<nav class="navbar-container">
-				<div class="second-navbar container-1 space-between">
+				<div class="second-navbar container space-between">
 					<div class="controls__section align-center gap-1">
-						<span class="link--container link--highlighted selector">
-							<i class="fa-solid fa-earth-americas"></i>
-							<span>English</span>
-							<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
+						<div class="selector">
+							<span class="link--container link--highlighted">
+								<i class="fa-solid fa-earth-americas"></i>
+								<span>English</span>
+								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
+							</span>
 							<ul class="selector__options">
 								<li>
 									<span class="link">English</span>
@@ -34,7 +36,7 @@
 									<span class="link">French</span>
 								</li>
 							</ul>
-						</span>
+						</div>
 						<button class="btn btn--unpadded" id="contrast-switch">
 							<div class="switch">
 								<div class="switch__contrast-toggle">
@@ -45,47 +47,614 @@
 						</button>
 					</div>
 					<div class="controls__section align-center gap-1">
-						<a href="" class="link link--highlighted">
-							Log in
-						</a>
-						<button class="btn btn--primary">
-							Start free or get a demo
-						</button>
+						<a href="" class="link link--highlighted"> Log in </a>
+						<button class="btn btn--primary">Start free or get a demo</button>
 					</div>
 				</div>
 			</nav>
 			<nav class="navbar-container">
-				<div class="main-navbar container-1 space-between">
+				<div class="main-navbar container space-between">
 					<img class="main-navbar__logo" src="img/logo.svg" alt="logo" />
 					<div class="controls space-between">
 						<div class="controls__section">
-							<span class="link--container link--highlighted link--padded-1 underlined-container">
-								<span>Blogs</span>
-								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
-							</span>
-							<span class="link--container link--highlighted link--padded-1 underlined-container">
-								<span>Newsletters</span>
-								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
-							</span>
-							<span class="link--container link--highlighted link--padded-1 underlined-container">
-								<span>Videos</span>
-								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
-							</span>
-							<span class="link--container link--highlighted link--padded-1 underlined-container">
-								<span>Podcasts</span>
-								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
-							</span>
-							<span class="link--container link--highlighted link--padded-1 underlined-container">
-								<span>Resources</span>
-								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
-							</span>
+							<div class="tab-hover" id="blogs-tab">
+								<span class="link--container link--highlighted link--padded-1 underlined-container">
+									<span>Blogs</span>
+									<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
+								</span>
+								<div class="tab-hover__container">
+									<div class="main-section">
+										<div class="container">
+											<h3 class="tab-hover__title heading-3">Blogs</h3>
+											<p class="tab-hover__description">
+												Trusted by business worldwide, the HubSpot Blogs are your number-one source
+												for education and inspiration.
+											</p>
+											<div class="tab-hover__content tab-hover__content--menu">
+												<div>
+													<div class="tab-hover__cards grid grid--cols-2 gap-1">
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/Blog%202021/Images/Nav/Optimized/BlogMarketing_64x64.png"
+																alt="loudspeaker"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Marketing</h4>
+																<p class="card--horizontal__description">
+																	Resources and ideas to put modern marketers ahead of the curve
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/Blog%202021/Images/Nav/Optimized/BlogSales_64x64.png"
+																alt="phone"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Sales</h4>
+																<p class="card--horizontal__description">
+																	Strategies to help you elevate your sales efforts
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/Blog%202021/Images/Nav/Optimized/BlogService_64x64.png"
+																alt="shaking hands"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Service</h4>
+																<p class="card--horizontal__description">
+																	Everything you need to deliver top-notch customer service
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/Blog%202021/Images/Nav/Optimized/BlogWebsite_64x64.png"
+																alt="computer on a hand"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Website</h4>
+																<p class="card--horizontal__description">
+																	Tutorials and how-tos to help you build better websites
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/blog-categories/ai-micro-64x64.jpg"
+																alt="magic ball"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Next in AI</h4>
+																<p class="card--horizontal__description">
+																	Your essential daily read on all things AI and business.
+																</p>
+															</div>
+														</a>
+													</div>
+													<a href="#" class="btn btn--primary">See all blogs</a>
+												</div>
+												<div class="tab-hover__menu">
+													<p>Explore by Topic</p>
+													<ul>
+														<li><a class="link-bare" href="">Instagram Marketing</a></li>
+														<li><a class="link-bare" href="">Customer Retention</a></li>
+														<li><a class="link-bare" href="">Email Marketing</a></li>
+														<li><a class="link-bare" href="">SEO</a></li>
+														<li><a class="link-bare" href="">Sales Prospecting</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-hover" id="newsletters-tab">
+								<span class="link--container link--highlighted link--padded-1 underlined-container">
+									<span>Newsletters</span>
+									<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
+								</span>
+								<div class="tab-hover__container">
+									<div class="main-section">
+										<div class="container">
+											<h3 class="tab-hover__title heading-3">Newsletters</h3>
+											<p class="tab-hover__description">
+												All of HubSpot's handcrafted email newsletters, tucked in one place.
+											</p>
+											<div class="tab-hover__content">
+												<div>
+													<div class="tab-hover__cards grid grid--cols-3 gap-1">
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/TheHustle_Icon_Dark.svg"
+																alt="loudspeaker"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">
+																	The Hustle
+																	<i class="fa-solid fa-up-right-from-square fa-xs"></i>
+																</h4>
+																<p class="card--horizontal__description">
+																	Irreverent and insightful takes on business and tech, delivered to your inbox.
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/Blog%20Creative/Nav/trends-logo.png"
+																alt="phone"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Trends</h4>
+																<p class="card--horizontal__description">
+																	Data-backed business trends, research insights, and industry analyses for business builders, delivered weekly.
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/MM_nav_thumbnail.png"
+																alt="shaking hands"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">
+																	Masters in Marketing
+																</h4>
+																<p class="card--horizontal__description">
+																	Exclusive interviews with industry leaders, and curated resources, to help you become a better marketer.
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/Blog%20Creative/Nav/pipeline-logo.png"
+																alt="computer on a hand"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">The Pipeline</h4>
+																<p class="card--horizontal__description">
+																	Tips, tactics, and strategies from experienced sales reps to help you make President's Club.
+																</p>
+															</div>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-hover" id="videos-tab">
+								<span class="link--container link--highlighted link--padded-1 underlined-container">
+									<span>Videos</span>
+									<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
+								</span>
+								<div class="tab-hover__container">
+									<div class="main-section">
+										<div class="container">
+											<h3 class="tab-hover__title heading-3">Videos</h3>
+											<p class="tab-hover__description">
+												Browse our collection of educational shows and videos on YouTube.
+											</p>
+											<div class="tab-hover__content">
+												<div>
+													<div class="tab-hover__cards grid grid--cols-3 gap-1">
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/TheHustle_Icon_Dark.svg"
+																alt="loudspeaker"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">
+																	The Hustle
+																	<i class="fa-solid fa-up-right-from-square fa-xs"></i>
+																</h4>
+																<p class="card--horizontal__description">
+																	Our unrivaled storytelling, in video format. Subscribe for little revelations across business and tech
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/Blog%202021/Images/Nav/Optimized/HubSpotLogo_64x64.png"
+																alt="phone"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">
+																	Marketing with HubSpot
+																	<i class="fa-solid fa-up-right-from-square fa-xs"></i>
+																</h4>
+																<p class="card--horizontal__description">
+																	Learn marketing strategies and skills straight from the HubSpot experts
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/MM_nav_thumbnail.png"
+																alt="shaking hands"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">
+																	My First Million
+																	<i class="fa-solid fa-up-right-from-square fa-xs"></i>
+																</h4>
+																<p class="card--horizontal__description">
+																	When it comes to brainstorming business ideas, Sam and Shaan are legends of the game
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/MAT%20-%20Show%20Tile%20Small.png"
+																alt="computer on a hand"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">
+																	Marketing Against The Grain
+																	<i class="fa-solid fa-up-right-from-square fa-xs"></i>
+																</h4>
+																<p class="card--horizontal__description">
+																	Watch two cerebral CMOs tackle strategy, tactics, and trends
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/Blog%202021/Images/Nav/Optimized/HubSpotLogo_64x64.png"
+																alt="magic ball"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">
+																	HubSpot
+																	<i class="fa-solid fa-up-right-from-square fa-xs"></i>
+																</h4>
+																<p class="card--horizontal__description">
+																	Everything you need to know about building your business on HubSpot
+																</p>
+															</div>
+														</a>
+													</div>
+													<a href="#" class="btn btn--primary">See all videos</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-hover" id="podcasts-tab">
+								<span class="link--container link--highlighted link--padded-1 underlined-container">
+									<span>Podcasts</span>
+									<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
+								</span>
+								<div class="tab-hover__container">
+									<div class="main-section">
+										<div class="container">
+											<h3 class="tab-hover__title heading-3">Podcasts</h3>
+											<p class="tab-hover__description">
+												HubSpot Podcast Network is the destination for business professionals who seek the best education on how to grow a business.
+											</p>
+											<div class="tab-hover__content tab-hover__content--menu">
+												<div>
+													<div class="tab-hover__cards grid grid--cols-2 gap-1">
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/MFM_Podcast_Art_Small.png"
+																alt="loudspeaker"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Mi First Million</h4>
+																<p class="card--horizontal__description">
+																	Each week, hosts Sam Parr and Shaan Puri explore new business ideas based on trends and opportunities in the market
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/Goal_Digger_Podcast_Small.png"
+																alt="phone"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Goal Digger</h4>
+																<p class="card--horizontal__description">
+																	Redefining what success means and how you can find more joy, ease, and peace in the pursuit of your goals
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/DailyShow_Art_Small.png"
+																alt="shaking hands"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">
+																	The Hustle Daily Show
+																</h4>
+																<p class="card--horizontal__description">
+																	A daily dose of irreverent, offbeat, and informative takes on business and tech news
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/Another%20Bite%20cover%20artwork_Small.jpg"
+																alt="computer on a hand"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">
+																	Another Bite
+																</h4>
+																<p class="card--horizontal__description">
+																	Each week, Another Bite breaks down the latest and greatest pitches from Shark Tank
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/Business_Made_Simple_Art_Small.png"
+																alt="magic ball"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">
+																	Business Made Simple
+																</h4>
+																<p class="card--horizontal__description">
+																	Build your business for far and fast success 
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/MAT%20-%20Show%20Tile%20Small.png"
+																alt="magic ball"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">
+																	Marketing Against the Grain
+																</h4>
+																<p class="card--horizontal__description">
+																	HubSpot CMO Kipp Bodnar and Zapier CMO Kieran Flanagan share what's happening now in marketing and what's ahead
+																</p>
+															</div>
+														</a>
+													</div>
+													<a href="#" class="btn btn--primary">See all podcasts</a>
+												</div>
+												<div class="tab-hover__menu">
+													<ul>
+														<li><a class="link-bare" href="">Online Marketing Made</a></li>
+														<li><a class="link-bare" href="">Easy</a></li>
+														<li><a class="link-bare" href="">The Product Boss</a></li>
+														<li><a class="link-bare" href="">Nudge</a></li>
+														<li><a class="link-bare" href="">Side Hustle Pro</a></li>
+														<li><a class="link-bare" href="">Outbound Squad</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-hover" id="resources-tab">
+								<span class="link--container link--highlighted link--padded-1 underlined-container">
+									<span>Resources</span>
+									<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
+								</span>
+								<div class="tab-hover__container">
+									<div class="main-section">
+										<div class="container">
+											<h3 class="tab-hover__title heading-3">Resources</h3>
+											<p class="tab-hover__description">
+												Expand your knowledge and take control of your career with our in-depth guides, lessons, and tools.
+											</p>
+											<div class="tab-hover__content">
+												<div>
+													<div class="tab-hover__cards grid grid--cols-3 gap-1">
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/resources_academy_small.png"
+																alt="loudspeaker"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Academy</h4>
+																<p class="card--horizontal__description">
+																	Learn and get certified in the latest business trends from leading experts
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/resources_templates_small.png"
+																alt="phone"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Templates</h4>
+																<p class="card--horizontal__description">
+																	Interactive documents and spreadsheets to customize for your business's needs
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/resources_ebooks_small.png"
+																alt="shaking hands"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Ebooks</h4>
+																<p class="card--horizontal__description">
+																	EIn-depth guides on dozens of topics pertaining to the marketing, sales, and customer service industries
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/resources_kits_small.png"
+																alt="computer on a hand"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Kits</h4>
+																<p class="card--horizontal__description">
+																	Multi-use content bundled into one download to inform and empower you and your team
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<img
+																src="https://53.fs1.hubspotusercontent-na1.net/hubfs/53/assets/hubspot.com/web-team/WBZ/HubSpot%20Media/Blog%202021/Images/Nav/Optimized/resources_tools_small.png"
+																alt="magic ball"
+																class="card--horizontal__img"
+															/>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Tools</h4>
+																<p class="card--horizontal__description">
+																	Customized assets for better branding, strategy, and insights
+																</p>
+															</div>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="controls__section">
 							<i class="fa-solid fa-magnifying-glass controls__search"></i>
-							<span class="link--container link--highlighted link--padded-1 underlined-container">
-								<span>HubSpot Products</span>
-								<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
-							</span>
+							<div class="tab-hover" id="hubspot-tab">
+								<span class="link--container link--highlighted link--padded-1 underlined-container">
+									<span>HubSpot Products</span>
+									<i class="fa-solid fa-chevron-down fa-xs rotated"></i>
+								</span>
+								<div class="tab-hover__container">
+									<div class="main-section">
+										<div class="container">
+											<h3 class="tab-hover__title heading-3">
+												The HubSpot Customer Platform
+											</h3>
+											<p class="tab-hover__description">
+												All of HubSpot's marketing, sales, customer service, CMS, operations, and commerce software on one platform.
+												<a href="#" class="link link-bare end-arrow">See pricing</a>
+											</p>
+											<div class="tab-hover__content tab-hover__content--menu w-80">
+												<div>
+													<div class="tab-hover__cards grid grid--cols-2 gap-1">
+														<a href="#" class="card tab-hover__card link--div justify-center">
+															<span class="link-bare">Free HubSpot CRM</span>
+														</a>
+														<a href="#" class="card tab-hover__card link--div justify-center">
+															<span class="link-bare">Free HubSpot CRM</span>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<i class="fa-solid fa-bolt"></i>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Marketing Hub</h4>
+																<p class="card--horizontal__description">
+																	Marketing automation software.
+																	<span class="link-bare">Free and premium plans</span>
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<i class="fa-solid fa-star"></i>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Sales Hub</h4>
+																<p class="card--horizontal__description">
+																	Sales CRM software.
+																	<span class="link-bare">Free and premium plans</span>
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<i class="fa-solid fa-heart"></i>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Service Hub</h4>
+																<p class="card--horizontal__description">
+																	Customer service software.
+																	<span class="link-bare">Free and premium plans</span>
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<i class="fa-brands fa-google-play"></i>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Content Hub</h4>
+																<p class="card--horizontal__description">
+																	Content marketing software.
+																	<span class="link-bare">Free and premium plans</span>
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<i class="fa-solid fa-gear"></i>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Operations Hub</h4>
+																<p class="card--horizontal__description">
+																	Operations software.
+																	<span class="link-bare">Free and premium plans</span>
+																</p>
+															</div>
+														</a>
+														<a href="#" class="card card--horizontal tab-hover__card link--div">
+															<i class="fa-solid fa-location-arrow"></i>
+															<div>
+																<h4 class="heading-4 card--horizontal__title">Commerce Hub</h4>
+																<p class="card--horizontal__description">
+																	B2B commerce software.
+																	<span class="link-bare">Free and premium plans</span>
+																</p>
+															</div>
+														</a>
+													</div>
+												</div>
+												<div class="tab-hover__menu">
+													<ul>
+														<li><a class="link-bare" href="">About HubSpot</a></li>
+														<li><a class="link-bare" href="">Contact Us</a></li>
+														<li><a class="link-bare" href="">Customer Support</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="controls-section">
+										<div class="container">
+											<a href="#" class="btn btn--primary">
+												Start free or get a demo
+											</a>
+											<a href="#" class="btn btn--outlined">
+												Contact Sales
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
