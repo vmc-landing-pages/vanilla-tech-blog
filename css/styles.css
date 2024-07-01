@@ -1,0 +1,168 @@
+
+
+/* ####################  COMPLEX COMPONENTS  #################### */
+/* ########################################################## */
+/* ########################################################## */
+
+/* ########################################################## */
+/* ####################  NAVBAR  #################### */
+/* ########################################################## */
+/* --------------  Main  -------------- */
+
+.navbar-container {
+	border-bottom: 1px solid var(--border-color-1);
+}
+
+.main-navbar {
+	height: 5rem;
+}
+
+.main-navbar .link--container {
+	color: var(--font-color-2);
+	font-size: var(--fs-normal);
+	line-height: var(--line-height-m);
+}
+
+.main-navbar__logo {
+	height: 1.5rem;
+	margin-right: 2rem;
+	align-self: center;
+}
+
+.controls {
+	flex: 1;
+}
+
+.controls__section {
+	display: flex;
+}
+
+.controls__section > .btn {
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+}
+
+/* TODO: change this to icon */
+.controls__search { 
+	height: 100%;
+	padding: 0 2rem;
+	font-size: 1.5rem;
+	border-right: 1px solid var(--border-color-1);
+	display: flex !important;
+	align-items: center;
+	cursor: pointer
+}
+
+/* --------------  Secondary  -------------- */
+
+.second-navbar {
+	height: 3.375rem;
+}
+
+
+/* ####################  TAB HOVER  #################### */
+/* ########################################################## */
+
+.tab-hover {
+	display: flex;
+}
+
+/* -------- make link in hover-state when hovering tab-hover component ---*/
+.tab-hover:hover .link--container > span {
+	text-decoration: underline;
+}
+.tab-hover:hover .link--container .rotated {
+	transform: rotate(180deg);
+}
+.tab-hover:hover .link.link--highlighted, 
+.tab-hover:hover .link--container.link--highlighted {
+	color: var(--highlight-color);
+}
+.tab-hover:hover .contrast .link.link--highlighted, 
+.tab-hover:hover .contrast .link--container.link--highlighted {
+	color: var(--contrast-primary);
+}
+.tab-hover:hover .underlined-container::after {
+	border-color: var(--slate-700);
+}
+/* ---------------------------------------------------------------------- */
+
+
+
+.tab-hover__container {
+	position: fixed;
+	width: 100%;
+	top: 8.5rem;
+	left: 0;
+	display: none;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tab-hover__container .main-section {
+	background-color: var(--gray-1);
+	padding: 1.5rem 0;
+}
+
+.tab-hover__container .controls-section {
+	padding: 1rem 0;
+}
+
+.tab-hover__description {
+	font-size: var(--fs-normal);
+	line-height: var(--line-height-m);
+	font-weight: var(--font-weight-weak);
+	margin-bottom: 1.5rem;
+}
+
+.tab-hover__content {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.tab-hover__content--menu {
+	grid-template-columns: 1fr auto;
+	column-gap: 2.5rem;
+}
+
+.tab-hover__cards {
+	margin-bottom: 1.5rem;
+}
+
+.tab-hover__card {
+	transition: background-color 0.3s ease-in-out;
+}
+
+.tab-hover__card > i {
+	font-size: 1.5rem;
+	color: var(--primary);
+}
+
+.tab-hover__card .link-bare::after {
+	content: ' \2192';
+}
+
+.tab-hover__card:hover {
+	background-color: var(--gray-2);
+}
+
+.tab-hover__card:hover .link-bare {
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-decoration-color: #5fa3d4;
+}
+
+.tab-hover__menu > p:first-of-type {
+	text-transform: uppercase;
+	font-weight: var(--font-weight-bold-1);
+	margin-bottom: 1rem;
+}
+
+.tab-hover__menu ul {
+	list-style: none;
+	display: grid;
+	row-gap: 0.5rem;
+}
+
+.tab-hover__menu .link-bare {
+	line-height: 1.78;
+}
