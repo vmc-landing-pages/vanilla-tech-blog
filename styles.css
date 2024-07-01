@@ -544,6 +544,7 @@ a {
 	top: 8.5rem;
 	left: 0;
 	display: none;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .tab-hover__container .main-section {
