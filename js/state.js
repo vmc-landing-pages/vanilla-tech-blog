@@ -1,19 +1,19 @@
-import Observable from "./observable.js";
+import Observable from './observable.js';
 
 /*
   THIS IS THE STATE OF THE APPLICATION
 */
 
 class ApplicationState {
-  #contrast = new Observable(false);
+	#contrast = new Observable(false);
 
-  get contrast() {
-    return this.#contrast;
-  }
+	get contrast() {
+		return this.#contrast;
+	}
 
-  set contrast(newValue) {
-    this.#contrast.value = newValue;
-  }
+	set contrast(newValue) {
+		this.#contrast.value = newValue;
+	}
 }
 
 const appState = new ApplicationState();

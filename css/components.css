@@ -55,12 +55,12 @@
 	padding: 0 1rem;
 }
 
-.link.link--highlighted:hover, 
+.link.link--highlighted:hover,
 .link--container.link--highlighted:hover {
 	color: var(--highlight-color);
 }
 
-.contrast .link.link--highlighted:hover, 
+.contrast .link.link--highlighted:hover,
 .contrast .link--container.link--highlighted:hover {
 	color: var(--contrast-primary);
 }
@@ -81,9 +81,7 @@
 	border: 2px solid transparent;
 	background-color: transparent;
 	cursor: pointer;
-	transition:
-		background-color 0.3s linear,
-		color 0.3s linear;
+	transition: background-color 0.3s linear, color 0.3s linear;
 }
 
 .btn--unpadded {
@@ -149,9 +147,7 @@
 	border: 1px solid var(--font-color-1);
 	border-radius: var(--br-normal);
 	background-color: white;
-	transition:
-		border-color 0.5s ease-in-out,
-		background-color 0.5s ease-in-out,
+	transition: border-color 0.5s ease-in-out, background-color 0.5s ease-in-out,
 		border-width 0.5s ease-in-out;
 }
 
@@ -172,8 +168,7 @@
 	background-color: white;
 	border-radius: 100px;
 	padding: 1px;
-	transition: 
-		width 0.5s linear;
+	transition: width 0.5s linear;
 }
 
 .switch.active .switch__contrast-toggle {
@@ -197,9 +192,7 @@
 	);
 	border: 1px solid var(--font-color-1);
 	border-radius: 50%;
-	transition: 
-		transform 0.5s ease-in-out,
-		opacity 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .switch.active .switch__normal-toggle {
@@ -215,7 +208,7 @@
 	align-self: stretch;
 }
 
-.selector:hover .selector__options{
+.selector:hover .selector__options {
 	height: auto;
 	opacity: 1;
 	padding: 1rem;
@@ -249,7 +242,7 @@
 	overflow: hidden;
 	flex-direction: column;
 
-	.card__content {		
+	.card__content {
 		.card--padded-m & {
 			padding: 1.5rem;
 		}

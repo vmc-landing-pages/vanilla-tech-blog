@@ -1,5 +1,5 @@
 import appState from './state.js';
-import { setTabHoverSettings } from './tabHover.js'
+import { setTabHoverSettings } from './tabHover.js';
 
 window.addEventListener('load', () => {
 	initialize();
@@ -15,15 +15,14 @@ function setContrastSettings() {
 	const switchButton = document.getElementById('contrast-switch');
 	const switchComponent = switchButton.querySelector('.switch');
 
-	appState.contrast.addObservers([changeAppContrast])
+	appState.contrast.addObservers([changeAppContrast]);
 
 	switchButton.addEventListener('click', () => {
 		if (!switchComponent.classList.contains(SWITCH_ACTIVE_CLASS)) {
 			switchComponent.classList.add(SWITCH_ACTIVE_CLASS);
 			appState.contrast = true;
-		}
-		else {
-      switchComponent.classList.remove(SWITCH_ACTIVE_CLASS);
+		} else {
+			switchComponent.classList.remove(SWITCH_ACTIVE_CLASS);
 			appState.contrast = false;
 		}
 	});
@@ -40,4 +39,3 @@ function changeAppContrast(_, contrast) {
 function setHeaderSettings() {
 	setTabHoverSettings();
 }
-

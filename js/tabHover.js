@@ -12,21 +12,21 @@ export function setTabHoverSettings() {
 		'hubspot-tab'
 	];
 
-  tabContainerIds.forEach(containerId => {
-    const container = document.getElementById(containerId);
+	tabContainerIds.forEach(containerId => {
+		const container = document.getElementById(containerId);
 
 		const throttledShow = throttleEndWithCancel(showTab, THROTTLE_DELAY);
 		const throttledHide = throttleEndWithCancel(hideTab, THROTTLE_DELAY);
 
-		container.addEventListener('mouseenter', function() {
+		container.addEventListener('mouseenter', function () {
 			throttledHide.cancel();
 			throttledShow.throttled.apply(this); //Sending the html element as context.
 		});
-    container.addEventListener('mouseleave', function() {
+		container.addEventListener('mouseleave', function () {
 			throttledShow.cancel();
 			throttledHide.throttled.apply(this); //Sending the html element as context.
 		});
-  });
+	});
 }
 
 function showTab() {

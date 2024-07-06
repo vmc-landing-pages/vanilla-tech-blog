@@ -40,9 +40,8 @@
 
 	--font-color-1: #213343;
 	--font-color-2: #2e475d;
-	
-	--icon-color-1: #516f90;
 
+	--icon-color-1: #516f90;
 
 	/* --------------  FONT-SIZE  -------------- */
 	--fs-normal: 1rem;
@@ -52,17 +51,16 @@
 	--font-weight-weak: 300;
 	--font-weight-bold-1: 500;
 
-	
 	/* --------------  BORDER RADIUS  -------------- */
 	--br-normal: 0.5rem;
 	--br-sm: 3px;
-	
+
 	/* --------------  LINE-HEIGHT  -------------- */
 	--line-height-m: 1.75rem;
 	--line-height-default: 1;
 	--line-height-s: 1.531;
 	--line-height-xs: 1.375;
-	
+
 	/* --------------  Z-index  -------------- */
 	--z-menu: 10;
 }
@@ -71,7 +69,8 @@ html {
 	height: 100vh;
 }
 
-html, button {
+html,
+button {
 	font-family: 'Lexend Deca', sans-serif;
 }
 
