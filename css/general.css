@@ -20,6 +20,7 @@
 	--bg-color-1: #fff;
 	--bg-color-2: var(--gray-1);
 
+	--primary--light-3: #fef4ea;
 	--outlined-hover-bg: #ffebe6;
 	--outlined-active-bg: #ffcec2;
 	--primary: #ff5c35;
@@ -77,6 +78,7 @@ html, button {
 body {
 	font-size: var(--fs-small);
 	line-height: var(--line-height-default);
+	line-height: 1;
 	color: var(--font-color-1);
 }
 
@@ -155,6 +157,11 @@ a {
 	position: static !important;
 }
 
+/* TODO: enable this when working with sections
+.section-container {
+	padding: 2.5rem .5rem;
+} */
+
 /* --------------  DECORATION  -------------- */
 
 .underlined-container::after {
@@ -172,6 +179,11 @@ a {
 
 .end-arrow::after {
 	content: ' \2192';
+}
+
+/* --------------  COLOR  -------------- */
+.bg-light {
+	background-color: var(--primary--light-3);
 }
 
 
@@ -417,15 +429,31 @@ a {
 	transition: opacity 0.5s;
 }
 
-/* ####################  HORIZONTAL CARD  #################### */
+/* ####################  CARD  #################### */
 /* ########################################################## */
 
 .card {
 	display: flex;
-	gap: 1rem;
+	border-radius: var(--br-sm);
+	overflow: hidden;
+	flex-direction: column;
+
+	.card__content {		
+		.card--padded-m & {
+			padding: 1.5rem;
+		}
+	}
+}
+
+/* ####################  HORIZONTAL CARD  #################### */
+/* ########################################################## */
+
+.card--horizontal {
 	padding: 1rem;
 	background-color: white;
 	border-radius: var(--br-normal);
+	flex-direction: row;
+	gap: 1rem;
 }
 
 .card--horizontal i,
