@@ -166,3 +166,29 @@
 .tab-hover__menu .link-bare {
 	line-height: 1.78;
 }
+
+
+/* ########################################################## */
+/* ####################  HERO SECTION  #################### */
+/* ########################################################## */
+
+.hero__container {
+	display: grid;
+	gap: 1.75rem;
+	grid-template-columns: min-content 1fr;
+}
+
+.hero__main {
+	height: 523px;
+	width: 600px;
+	background-color: green;
+}
+
+.hero__posts {
+	background-color: red;
+}
+
+.hero__cards {
+	grid-column: 1 / -1;
+	background-color: yellow;
+}
