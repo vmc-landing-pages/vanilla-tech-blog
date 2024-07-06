@@ -1,0 +1,289 @@
+/* ####################  BASIC COMPONENTS  #################### */
+/* ########################################################## */
+/* ########################################################## */
+/* ########################################################## */
+
+/* ####################  LINK  #################### */
+/* ########################################################## */
+.link-bare {
+	color: var(--highlight-color);
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.link--div {
+	text-decoration: none;
+}
+
+.link,
+.link--container {
+	cursor: pointer;
+	font-weight: 500;
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.link--container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.link--container:hover > span {
+	text-decoration: underline;
+}
+
+.link--container > i {
+	transition: transform 0.3s ease-in-out;
+	text-decoration: none;
+}
+
+.link--container i.fa-earth-americas {
+	font-size: 1rem;
+}
+
+.link--container:hover .rotated {
+	transform: rotate(180deg);
+}
+
+.link--padded-1 {
+	padding: 0 1rem;
+}
+
+.link.link--highlighted:hover, 
+.link--container.link--highlighted:hover {
+	color: var(--highlight-color);
+}
+
+.contrast .link.link--highlighted:hover, 
+.contrast .link--container.link--highlighted:hover {
+	color: var(--contrast-primary);
+}
+
+/* ####################  BUTTON  #################### */
+/* ########################################################## */
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
+	line-height: 1.57;
+	font-size: var(--fs-small);
+	font-weight: 500;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	border-radius: var(--br-normal);
+	border: 2px solid transparent;
+	background-color: transparent;
+	cursor: pointer;
+	transition:
+		background-color 0.3s linear,
+		color 0.3s linear;
+}
+
+.btn--unpadded {
+	padding: 0;
+}
+
+.btn--primary {
+	background-color: var(--primary);
+	color: var(--primary-text);
+}
+
+.contrast .btn--primary {
+	background-color: var(--contrast-primary);
+	color: var(--contrast-color);
+}
+
+.btn--primary:hover {
+	background-color: var(--primary-hover);
+}
+
+.contrast .btn--primary:hover {
+	background-color: var(--contrast-hover);
+	color: var(--contrast-primary);
+}
+
+.btn--primary:active {
+	background-color: var(--primary-active);
+}
+
+.btn--outlined {
+	background-color: var(--bg-color-1);
+	color: var(--primary);
+	border-color: currentColor;
+}
+
+.contrast .btn--outlined {
+	background-color: var(--contrast-outlined-bg);
+	color: var(--contrast-primary);
+}
+
+.btn--outlined:hover {
+	background-color: var(--outlined-hover-bg);
+	color: var(--primary-hover);
+}
+
+.contrast .btn--outlined:hover {
+	background-color: var(--contrast-outlined-hover-bg);
+	color: var(--contrast-primary);
+}
+
+.btn--outlined:active {
+	background-color: var(--outlined-active-bg);
+	color: var(--primary-active);
+}
+
+/* ####################  SWITCH  #################### */
+/* ########################################################## */
+
+.switch {
+	position: relative;
+	height: 1rem;
+	width: 2rem;
+	border: 1px solid var(--font-color-1);
+	border-radius: var(--br-normal);
+	background-color: white;
+	transition:
+		border-color 0.5s ease-in-out,
+		background-color 0.5s ease-in-out,
+		border-width 0.5s ease-in-out;
+}
+
+.switch.active {
+	border: 2px solid var(--contrast-primary);
+	background-color: var(--contrast-primary);
+}
+
+.switch__contrast-toggle {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(0, -50%);
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	border-radius: 100px;
+	padding: 1px;
+	transition: 
+		width 0.5s linear;
+}
+
+.switch.active .switch__contrast-toggle {
+	width: 0.75rem;
+}
+
+.btn:hover .switch__contrast-toggle:not(.switch.active .switch__contrast-toggle),
+.switch:hover .switch__contrast-toggle:not(.switch.active .switch__contrast-toggle) {
+	background-color: var(--gray-2);
+}
+
+.switch__normal-toggle {
+	height: 97%;
+	aspect-ratio: 1 / 1;
+	background: linear-gradient(
+		90deg,
+		white,
+		white 50%,
+		var(--font-color-1) 50%,
+		var(--font-color-1)
+	);
+	border: 1px solid var(--font-color-1);
+	border-radius: 50%;
+	transition: 
+		transform 0.5s ease-in-out,
+		opacity 0.5s ease-in-out;
+}
+
+.switch.active .switch__normal-toggle {
+	transform: rotate(180deg);
+	opacity: 0;
+}
+
+/* ####################  SELECTOR  #################### */
+/* ########################################################## */
+.selector {
+	position: relative;
+	display: flex;
+	align-self: stretch;
+}
+
+.selector:hover .selector__options{
+	height: auto;
+	opacity: 1;
+	padding: 1rem;
+}
+
+.selector__options {
+	position: absolute;
+	z-index: var(--z-menu);
+	bottom: 0;
+	transform: translate(25%, 100%);
+	display: flex;
+	height: 0;
+	overflow: hidden;
+	flex-direction: column;
+	gap: 1.5rem;
+	padding: 0;
+	border: 1px solid var(--border-color-1);
+	background-color: var(--bg-color-1);
+	list-style-type: none;
+	border-radius: var(--br-normal);
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+/* ####################  CARD  #################### */
+/* ########################################################## */
+
+.card {
+	display: flex;
+	border-radius: var(--br-sm);
+	overflow: hidden;
+	flex-direction: column;
+
+	.card__content {		
+		.card--padded-m & {
+			padding: 1.5rem;
+		}
+	}
+}
+
+/* ####################  HORIZONTAL CARD  #################### */
+/* ########################################################## */
+
+.card--horizontal {
+	padding: 1rem;
+	background-color: white;
+	border-radius: var(--br-normal);
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.card--horizontal i,
+.card--horizontal__img {
+	height: 2rem;
+	width: 2rem;
+	object-fit: cover;
+	border-radius: var(--br-sm);
+}
+
+.card--horizontal__title {
+	margin-bottom: 0.25rem;
+}
+
+.card--horizontal__title i {
+	color: var(--icon-color-1);
+}
+
+.card--horizontal__description {
+	line-height: 1.57;
+	font-weight: var(--font-weight-weak);
+}
