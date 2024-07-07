@@ -1,0 +1,194 @@
+/* ####################  GENERAL STYLES  #################### */
+/* ########################################################## */
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/* --------------  COLORS  -------------- */
+	--slate-700: #2e475d;
+
+	--gray-1: #f6f9fc;
+	--gray-2: #eaf0f6;
+	--gray-3: #dbe4ed;
+
+	--bg-color-1: #fff;
+	--bg-color-2: var(--gray-1);
+
+	--primary--light-3: #fef4ea;
+	--outlined-hover-bg: #ffebe6;
+	--outlined-active-bg: #ffcec2;
+	--primary: #ff5c35;
+	--primary-hover: #e04826;
+	--primary-active: #b3361d;
+
+	--contrast-outlined-bg: #edf8ff;
+	--contrast-outlined-hover-bg: #caebff;
+	--contrast-primary: #0000c5;
+	--contrast-hover: #caebff;
+	--contrast-color: #fff;
+
+	--primary-text: #fff;
+	--border-color-1: var(--gray-3);
+
+	--highlight-color: #0068b1;
+
+	--font-color-1: #213343;
+	--font-color-2: #2e475d;
+	--font-color-3: #516f90;
+
+	--icon-color-1: #516f90;
+
+	/* --------------  FONT-SIZE  -------------- */
+	--fs-normal: 1rem;
+	--fs-small: 0.875rem;
+
+	/* --------------  FONT-WEIGHT  -------------- */
+	--font-weight-normal: 300;
+	--font-weight-bold-1: 500;
+
+	/* --------------  BORDER RADIUS  -------------- */
+	--br-normal: 0.5rem;
+	--br-sm: 3px;
+
+	/* --------------  LINE-HEIGHT  -------------- */
+	--line-height-m: 1.75;
+	--line-height-default: 1;
+	--line-height-s: 1.531;
+	--line-height-xs: 1.375;
+
+	/* --------------  Z-index  -------------- */
+	--z-menu: 10;
+}
+
+html {
+	height: 100vh;
+}
+
+html,
+button {
+	font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+	font-size: var(--fs-small);
+	line-height: var(--line-height-m);
+	color: var(--font-color-1);
+	font-weight: var(--font-weight-normal);
+}
+
+a {
+	color: inherit;
+}
+
+.heading-3,
+.heading-4 {
+	font-weight: 600;
+}
+
+.heading-3 {
+	font-size: 1.5rem;
+	line-height: 1.42;
+}
+
+.heading-4 {
+	font-size: 1.125rem;
+	line-height: 1.25;
+}
+
+.container {
+	max-width: 67.5rem;
+	margin: auto;
+
+	&.container--section {
+		padding: 2.5rem .5rem;
+	}
+}
+
+/* ####################  UTILS  #################### */
+/* ########################################################## */
+/* ########################################################## */
+/* ########################################################## */
+/* --------------  LAYOUT  -------------- */
+
+.grid {
+	display: grid;
+}
+
+.grid--cols-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--cols-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.space-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.align-self--stretch {
+	align-self: stretch;
+}
+
+.gap-1 {
+	gap: 1rem;
+}
+
+.h-100 {
+	height: 100%;
+}
+
+.w-80 {
+	width: 80% !important;
+}
+
+.position-static {
+	position: static !important;
+}
+
+.margin-b-m {
+	margin-bottom: 1.5rem;
+}
+
+.margin-b-s {
+	margin-bottom: 1rem;
+}
+
+/* --------------  DECORATION  -------------- */
+
+.underlined-container::after {
+	content: '';
+	position: absolute;
+	border-top: 2px solid transparent;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.underlined-container:hover::after {
+	border-color: var(--slate-700);
+}
+
+.end-arrow::after {
+	content: ' \2192';
+}
+
+/* --------------  COLOR  -------------- */
+.bg-light {
+	background-color: var(--primary--light-3);
+}
