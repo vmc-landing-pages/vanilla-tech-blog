@@ -40,6 +40,7 @@
 
 	--font-color-1: #213343;
 	--font-color-2: #2e475d;
+	--font-color-3: #516f90;
 
 	--icon-color-1: #516f90;
 
@@ -48,7 +49,7 @@
 	--fs-small: 0.875rem;
 
 	/* --------------  FONT-WEIGHT  -------------- */
-	--font-weight-weak: 300;
+	--font-weight-normal: 300;
 	--font-weight-bold-1: 500;
 
 	/* --------------  BORDER RADIUS  -------------- */
@@ -56,7 +57,7 @@
 	--br-sm: 3px;
 
 	/* --------------  LINE-HEIGHT  -------------- */
-	--line-height-m: 1.75rem;
+	--line-height-m: 1.75;
 	--line-height-default: 1;
 	--line-height-s: 1.531;
 	--line-height-xs: 1.375;
@@ -76,9 +77,9 @@ button {
 
 body {
 	font-size: var(--fs-small);
-	line-height: var(--line-height-default);
-	line-height: 1;
+	line-height: var(--line-height-m);
 	color: var(--font-color-1);
+	font-weight: var(--font-weight-normal);
 }
 
 a {
@@ -103,6 +104,10 @@ a {
 .container {
 	max-width: 67.5rem;
 	margin: auto;
+
+	&.container--section {
+		padding: 2.5rem .5rem;
+	}
 }
 
 /* ####################  UTILS  #################### */
@@ -156,10 +161,13 @@ a {
 	position: static !important;
 }
 
-/* TODO: enable this when working with sections
-.section-container {
-	padding: 2.5rem .5rem;
-} */
+.margin-b-m {
+	margin-bottom: 1.5rem;
+}
+
+.margin-b-s {
+	margin-bottom: 1rem;
+}
 
 /* --------------  DECORATION  -------------- */
 

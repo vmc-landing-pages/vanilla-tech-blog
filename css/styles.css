@@ -103,6 +103,7 @@
 
 .tab-hover__container .controls-section {
 	padding: 1rem 0;
+	background-color: var(--bg-color-1);
 }
 
 .tab-hover__description {
@@ -135,7 +136,7 @@
 	color: var(--primary);
 }
 
-.tab-hover__card .link-bare::after {
+.tab-hover__link::after {
 	content: ' \2192';
 }
 
@@ -143,7 +144,7 @@
 	background-color: var(--gray-2);
 }
 
-.tab-hover__card:hover .link-bare {
+.tab-hover__card:hover .tab-hover__link {
 	text-decoration: underline;
 	text-decoration-thickness: 2px;
 	text-decoration-color: #5fa3d4;
@@ -176,8 +177,12 @@
 }
 
 .hero__main {
-	height: 523px;
 	width: 600px;
+}
+
+.hero__image {
+	height: 300px;
+	object-fit: cover;
 }
 
 .hero__posts {
