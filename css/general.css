@@ -101,6 +101,12 @@ a {
 	line-height: 1.25;
 }
 
+.heading-5 {
+	font-size: 1rem;
+	line-height: 1.57;
+	font-weight: 500;
+}
+
 .container {
 	max-width: 67.5rem;
 	margin: auto;
@@ -171,7 +177,15 @@ a {
 
 /* --------------  DECORATION  -------------- */
 
-.underlined-container::after {
+.underlined-container {
+	border-bottom: 2px solid var(--gray-3);
+
+	&.underlined-container--primary {
+		border-bottom-color: var(--primary);
+	}
+}
+
+.underlined-container--hover::after {
 	content: '';
 	position: absolute;
 	border-top: 2px solid transparent;
@@ -180,7 +194,7 @@ a {
 	width: 100%;
 }
 
-.underlined-container:hover::after {
+.underlined-container--hover:hover::after {
 	border-color: var(--slate-700);
 }
 

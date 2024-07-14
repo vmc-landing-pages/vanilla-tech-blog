@@ -185,11 +185,21 @@
 	object-fit: cover;
 }
 
-.hero__posts {
-	background-color: red;
+.hero__side {
+	align-self: start;
+	display: grid;
+	gap: 1rem;
+	
+	.hero__side-title {
+		padding-bottom: 4px;
+		margin-bottom: -4px;
+	}
+
+	.hero__side-card:not(:last-child) {
+		padding-bottom: 1rem;
+	}
 }
 
 .hero__cards {
 	grid-column: 1 / -1;
-	background-color: yellow;
 }
