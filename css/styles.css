@@ -189,7 +189,7 @@
 	align-self: start;
 	display: grid;
 	gap: 1rem;
-	
+
 	.hero__side-title {
 		padding-bottom: 4px;
 		margin-bottom: -4px;
