@@ -312,4 +312,9 @@ a.card--link {
 	&.foot--start {
 		justify-content: flex-start;
 	}
+
+	&.foot--col {
+		flex-direction: column;
+		gap: 0;
+	}
 }

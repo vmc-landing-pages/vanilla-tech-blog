@@ -202,4 +202,11 @@
 
 .hero__cards {
 	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+
+	.hero__cards-description {
+		line-height: var(--line-height-s2);
+	}
 }
