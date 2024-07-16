@@ -1,8 +1,8 @@
-import { throttleEndWithCancel } from './utils/throttle.js';
+import { throttleEndWithCancel } from '../../utils/throttle.js';
 
 const THROTTLE_DELAY = 500; // in miliseconds.
 
-export function setTabHoverSettings() {
+export default function setTabHoverSettings() {
 	const tabContainerIds = [
 		'blogs-tab',
 		'newsletters-tab',

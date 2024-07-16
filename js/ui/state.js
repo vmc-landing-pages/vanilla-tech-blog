@@ -1,4 +1,4 @@
-import Observable from './observable.js';
+import Observable from '../utils/Observable.js';
 
 /*
   THIS IS THE STATE OF THE APPLICATION
